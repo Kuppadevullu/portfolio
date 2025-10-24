@@ -1,0 +1,117 @@
+/* --- General Styles --- */
+body {
+  color: #eaf6ff;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background: #000;
+}
+
+/* Background image with gradient overlay */
+#bg-overlay {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url("bg-dev.jpg") center/cover no-repeat fixed;
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  filter: brightness(0.9);
+}
+
+/* Particle canvas overlay */
+#bgParticles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Navigation */
+.glass-nav {
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  color: #eaf6ff !important;
+  margin: 0 10px;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: #00ffff !important;
+}
+
+/* Hero Section */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.neon-text span {
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+/* Buttons */
+.btn-neon {
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+}
+
+/* Sections */
+.glass-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.section-title {
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+/* Skills */
+.skill-box {
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s;
+}
+.skill-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Projects */
+.project-card {
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  color: #aaa;
+}
