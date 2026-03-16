@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kuppa Devullu – Cybersecurity Portfolio. Web Application Tester & VAPT Analyst specializing in OWASP Top 10, Burp Suite, and Web Application Security." />
+  <meta name="keywords" content="Kuppa Devullu, Cybersecurity, VAPT, Web Application Penetration Testing, OWASP Top 10, Burp Suite, Network Security, Ethical Hacking" />
+  <title>Kuppa Devullu | Web Application Tester & VAPT Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="nav-brand"><span class="mono">&lt;</span>KD<span class="mono">/&gt;</span></div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="resume.html" target="_blank" class="nav-resume-btn"><i class="fas fa-file-alt"></i> Resume</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <canvas id="matrix-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Open to Cybersecurity Roles – Kakinada, India</div>
+    <h1>Hi, I'm <span class="gradient-text">Kuppa Devullu</span></h1>
+    <div class="typewriter-wrap">
+      <span class="mono typewriter" id="typewriter"></span><span class="cursor">|</span>
+    </div>
+    <p class="hero-sub">
+      Cybersecurity graduate with hands-on experience in <strong>VAPT</strong>,
+      <strong>OWASP Top 10 testing</strong>, and <strong>Web Application Security</strong>.
+      Proficient in Burp Suite, API testing, and identifying XSS, SQL Injection &amp; CSRF vulnerabilities.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary"><i class="fas fa-shield-alt"></i> View Projects</a>
+      <a href="resume.html" target="_blank" class="btn-outline"><i class="fas fa-download"></i> Download Resume</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-target="1">0</span><span>Experience</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="1">0</span><span>Project</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-target="2">0</span><span>Certifications</span></div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><div class="mouse"></div><span>Scroll Down</span></div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// ABOUT ME</span>
+      <h2>Who I Am</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-ring">
+          <img src="assets/profile.png" alt="Kuppa Devullu – Web Application Tester & VAPT Analyst" />
+        </div>
+        <div class="about-social">
+          <a href="mailto:devullukuppa@gmail.com" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+          <a href="tel:8309494115" aria-label="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3>Web Application Tester &amp; VAPT Analyst</h3>
+        <p>
+          Cybersecurity graduate with practical experience in <strong>VAPT</strong>, <strong>OWASP Top 10 testing</strong>,
+          and <strong>Web Application Security</strong>. Proficient in Burp Suite, API testing, and identifying
+          vulnerabilities such as <strong>XSS</strong>, <strong>SQL Injection</strong>, and <strong>CSRF</strong>.
+        </p>
+        <p>
+          Knowledge of frontend technologies (HTML, CSS, JavaScript) to analyze <strong>client-side security risks</strong>.
+          Strong analytical skills with a passion for cybersecurity and continuous learning through real-world labs and simulations.
+        </p>
+        <div class="about-info-grid">
+          <div class="info-item"><i class="fas fa-envelope"></i><span>devullukuppa@gmail.com</span></div>
+          <div class="info-item"><i class="fas fa-phone"></i><span>8309494115</span></div>
+          <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Kakinada, India</span></div>
+          <div class="info-item"><i class="fas fa-graduation-cap"></i><span>B.Tech CSE – Cyber Security, 2025</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// CYBERSECURITY SKILLS</span>
+      <h2>Core Competencies</h2>
+    </div>
+    <div class="skills-grid">
+      <!-- Security Testing skills from resume -->
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-search"></i></div>
+        <h4>Web Application Penetration Testing (VAPT)</h4>
+        <p>Performed VAPT on live web applications including the NABFINS platform at Krify Software Technologies using Burp Suite and manual testing techniques.</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        <span class="skill-pct">85%</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>OWASP Top 10 Vulnerability Assessment</h4>
+        <p>Identifying and testing OWASP Top 10 risks including XSS, SQL Injection, CSRF, broken authentication, and security misconfigurations in web apps.</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        <span class="skill-pct">88%</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-exchange-alt"></i></div>
+        <h4>Manual Testing &amp; Request Manipulation</h4>
+        <p>Conducting in-depth manual security testing, HTTP request manipulation, parameter tampering, and intercepting traffic using proxy tools.</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        <span class="skill-pct">82%</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-lock"></i></div>
+        <h4>Authentication &amp; Session Testing</h4>
+        <p>Testing authentication flaws, session management vulnerabilities, broken access controls, and input validation weaknesses in web applications.</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        <span class="skill-pct">80%</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-globe"></i></div>
+        <h4>Frontend Security Analysis</h4>
+        <p>Leveraging knowledge of HTML, CSS, and JavaScript to analyze and identify client-side security risks including DOM-based XSS and CSRF vectors.</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        <span class="skill-pct">78%</span>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+        <h4>Machine Learning for Cybersecurity</h4>
+        <p>Built a real-time threat detection system using Naive Bayes, QDA, and MLP classifiers. Expertise in data preprocessing, model optimization, and cyber threat detection.</p>
+        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        <span class="skill-pct">75%</span>
+      </div>
+    </div>
+
+    <!-- Programming & Technologies from resume -->
+    <div class="tags-section">
+      <h3>Programming &amp; Technologies</h3>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Java (OOP Concepts)</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">XSS</span>
+        <span class="tag">SQL Injection</span>
+        <span class="tag">CSRF</span>
+        <span class="tag">Input Validation Testing</span>
+        <span class="tag">PoC Documentation</span>
+        <span class="tag">Remediation Reporting</span>
+        <span class="tag">IoT Security</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOOLS ═══ -->
+<section id="tools">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// SECURITY TOOLS</span>
+      <h2>Tools I Use</h2>
+    </div>
+    <!-- Tools exactly from resume -->
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-logo"><i class="fas fa-spider"></i></div>
+        <h4>Burp Suite</h4>
+        <p>Primary tool for web application security testing — proxy interception, request manipulation, and parameter tampering.</p>
+        <span class="tool-badge">Web App / VAPT</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><i class="fas fa-paper-plane"></i></div>
+        <h4>Postman</h4>
+        <p>API testing and security validation — testing endpoints, authentication flows, and API vulnerabilities.</p>
+        <span class="tool-badge">API Testing</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><i class="fas fa-satellite-dish"></i></div>
+        <h4>Nmap</h4>
+        <p>Basic knowledge of network discovery, port scanning, and service fingerprinting for reconnaissance.</p>
+        <span class="tool-badge">Network</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><i class="fas fa-wave-square"></i></div>
+        <h4>Wireshark</h4>
+        <p>Basic knowledge of network packet capture and traffic analysis for protocol inspection and security review.</p>
+        <span class="tool-badge">Analysis</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-logo"><i class="fab fa-wordpress"></i></div>
+        <h4>WPScan</h4>
+        <p>WordPress security scanner used to enumerate vulnerabilities, plugins, and misconfigurations in WordPress sites.</p>
+        <span class="tool-badge">Web Scanner</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// PROJECT</span>
+      <h2>Academic Project</h2>
+    </div>
+    <!-- Only 1 project from resume -->
+    <div class="projects-grid single-project">
+      <div class="project-card featured large-card">
+        <div class="project-header">
+          <span class="project-num">01</span>
+        </div>
+        <div class="project-icon-wrap"><i class="fas fa-robot"></i></div>
+        <h3>Threat Intelligence System [Machine Learning]</h3>
+        <p class="proj-date"><i class="fas fa-calendar-alt"></i> 01/2025 – 07/2025</p>
+        <p class="proj-institute"><i class="fas fa-university"></i> Kakinada Institute of Engineering and Technology (Academic Project)</p>
+        <ul class="proj-bullets">
+          <li>Built a real-time cyber threat detection system using <strong>Naive Bayes</strong>, <strong>QDA</strong>, and <strong>MLP classifiers</strong>.</li>
+          <li>Focused on <strong>data preprocessing</strong>, model optimization, and pipeline development.</li>
+          <li>Engineered a robust threat intelligence system leveraging advanced machine learning classifiers, incorporating optimized data preprocessing techniques and real-time processing capabilities for enhanced cyber threat detection reliability.</li>
+        </ul>
+        <div class="project-tags">
+          <span>Machine Learning</span>
+          <span>Naive Bayes</span>
+          <span>QDA</span>
+          <span>MLP Classifier</span>
+          <span>Python</span>
+          <span>Threat Detection</span>
+          <span>Data Preprocessing</span>
+          <span>Cybersecurity</span>
+        </div>
+        <div class="project-result"><i class="fas fa-check-circle"></i> Real-time cyber threat detection with ML pipeline</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// EXPERIENCE</span>
+      <h2>Work Experience</h2>
+    </div>
+    <!-- 1 experience from resume -->
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-left">
+          <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+          <div>
+            <h3>Web Application Tester &amp; VAPT Analyst</h3>
+            <span class="exp-company">Krify Software Technologies</span>
+          </div>
+        </div>
+        <div class="exp-right">
+          <span class="exp-date"><i class="fas fa-calendar-alt"></i> 01/2026 – 02/2026</span>
+          <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Kakinada</span>
+        </div>
+      </div>
+      <ul class="exp-list">
+        <li>Performed <strong>Vulnerability Assessment and Penetration Testing (VAPT)</strong> on web applications including the <strong>NABFINS platform</strong>.</li>
+        <li>Conducted manual security testing using <strong>Burp Suite</strong>, request manipulation, and parameter tampering techniques.</li>
+        <li>Identified vulnerabilities related to <strong>input validation</strong>, <strong>authentication flaws</strong>, and security misconfigurations.</li>
+        <li>Documented security issues with <strong>proof-of-concept (PoC)</strong> and remediation recommendations.</li>
+        <li>Validated fixes after remediation to ensure improved application security posture.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// CERTIFICATIONS</span>
+      <h2>Credentials</h2>
+    </div>
+    <!-- 2 certifications from resume -->
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+        <div class="cert-body">
+          <h4>Internet of Things – NPTEL</h4>
+          <span class="cert-issuer">Internet of Things (IoT) – NPTEL (IITS &amp; IISC)</span>
+          <span class="cert-desc">Strengthened knowledge of IoT architecture and security risks, helping better understand vulnerabilities in connected systems.</span>
+        </div>
+        <div class="cert-status verified">Verified</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+        <div class="cert-body">
+          <h4>Cyber Security Essentials – CISCO</h4>
+          <span class="cert-issuer">Cisco Networking Academy &nbsp;|&nbsp; 2025</span>
+          <span class="cert-desc">Provided practical knowledge of cybersecurity fundamentals, threat detection, and system protection.</span>
+        </div>
+        <div class="cert-status verified">Verified</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EDUCATION ═══ -->
+<section id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// EDUCATION</span>
+      <h2>Academic Background</h2>
+    </div>
+    <!-- 3 education entries from resume -->
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="tl-year">2025</span>
+          <h3>Bachelor of Technology – Computer Science &amp; Engineering</h3>
+          <h4>Specialization: Cyber Security</h4>
+          <p>Kakinada Institute of Engineering and Technology &nbsp;|&nbsp; Kakinada, India</p>
+          <ul class="tl-list">
+            <li>Actively improving technical expertise through continuous learning, labs, and real-world simulations.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="tl-year">2019 – 2021</span>
+          <h3>Diploma in Electronics and Communication Engineering</h3>
+          <h4>&nbsp;</h4>
+          <p>Aditya University &nbsp;|&nbsp; Kakinada, India</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="tl-year">2019</span>
+          <h3>SSC – Board of Secondary Education, Andhra Pradesh</h3>
+          <h4>Score: 8.8 GPA</h4>
+          <p>Municipal Corporation High School, Kakinada &nbsp;|&nbsp; East Godavari District, Andhra Pradesh, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// CONTACT</span>
+      <h2>Get In Touch</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's Connect</h3>
+        <p>I'm actively seeking <strong>cybersecurity roles</strong> including Web Application Tester, VAPT Analyst, and Security Analyst positions. Feel free to reach out!</p>
+        <!-- Contact info exactly from resume -->
+        <div class="contact-links">
+          <a href="mailto:devullukuppa@gmail.com" class="contact-item">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div><span>Email</span><strong>devullukuppa@gmail.com</strong></div>
+          </a>
+          <a href="tel:8309494115" class="contact-item">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div><span>Phone</span><strong>8309494115</strong></div>
+          </a>
+          <div class="contact-item no-link">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><span>Location</span><strong>Kakinada, India</strong></div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Collaboration" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-w"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="mono">&lt;</span>KD<span class="mono">/&gt;</span></div>
+    <p>Kuppa Devullu &bull; Web Application Tester &amp; VAPT Analyst &bull; Kakinada, India &bull; 2025</p>
+    <div class="footer-links">
+      <a href="mailto:devullukuppa@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:8309494115"><i class="fas fa-phone"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuppa Devullu – Resume | Web Application Tester & VAPT Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Toolbar (screen only, NOT printed) ── */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050a0e;
+      color: #e2e8f0;
+    }
+    .toolbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(5,10,14,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,229,255,0.2);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 40px; flex-wrap: wrap; gap: 12px;
+    }
+    .toolbar-brand { font-family: monospace; font-size: 1.1rem; color: #00e5ff; }
+    .toolbar-brand a { color: #94a3b8; text-decoration: none; font-size: 0.88rem; margin-right: 16px; }
+    .toolbar-brand a:hover { color: #00e5ff; }
+    .toolbar-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .ats-badge {
+      background: rgba(57,255,20,0.1); border: 1px solid rgba(57,255,20,0.4);
+      color: #39ff14; font-size: 0.78rem; padding: 5px 14px;
+      border-radius: 50px; font-family: monospace;
+    }
+    .btn-dl {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, #00e5ff, #7b2fff);
+      color: #000; font-weight: 700; font-size: 0.9rem;
+      padding: 10px 22px; border-radius: 8px; border: none;
+      cursor: pointer; text-decoration: none; transition: all 0.2s;
+    }
+    .btn-dl:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,229,255,0.4); }
+
+    /* ── ATS Meter ── */
+    .resume-wrapper { max-width: 900px; margin: 32px auto; padding: 0 20px 60px; }
+    .ats-meter {
+      background: rgba(15,25,35,0.9); border: 1px solid rgba(0,229,255,0.2);
+      border-radius: 12px; padding: 20px 28px; margin-bottom: 24px;
+      display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+    }
+    .ats-score-big { font-size: 2.5rem; font-weight: 900; color: #39ff14; font-family: monospace; }
+    .ats-score-big span { font-size: 1rem; color: #94a3b8; }
+    .ats-label { color: #94a3b8; font-size: 0.82rem; margin: 0 0 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .ats-bar-wrap { flex: 1; min-width: 200px; }
+    .ats-bar-track { background: rgba(255,255,255,0.08); border-radius: 4px; height: 8px; overflow: hidden; }
+    .ats-bar-fill { background: linear-gradient(90deg,#39ff14,#00e5ff); height:100%; border-radius:4px; width:0; transition: width 1.4s ease; }
+    .ats-checks { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .ats-check { font-size:0.78rem; color:#94a3b8; }
+    .ats-check::before { content:"✔ "; color:#39ff14; }
+
+    /* ══ RESUME DOCUMENT ══ */
+    #resume {
+      background: #fff; color: #111;
+      border-radius: 4px; padding: 44px 52px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt; line-height: 1.55;
+    }
+    /* Name & Header */
+    #resume .r-name {
+      font-size: 26pt; font-weight: 700; color: #111;
+      letter-spacing: -0.5px; margin: 0 0 4px; text-align: center;
+    }
+    #resume .r-title {
+      font-size: 12pt; color: #333; margin: 0 0 12px;
+      text-align: center; font-style: italic;
+    }
+    #resume .r-contact {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 6px 24px; font-size: 10pt; color: #333; margin-bottom: 4px;
+    }
+    #resume .r-contact a { color: #0056a6; text-decoration: none; }
+    #resume hr.r-line { border: none; border-top: 2px solid #111; margin: 12px 0 18px; }
+    #resume hr.r-thin { border: none; border-top: 1px solid #ccc; margin: 8px 0; }
+
+    /* Section Headings */
+    #resume .r-section-title {
+      font-size: 11pt; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      color: #111; border-bottom: 1.5px solid #111;
+      padding-bottom: 3px; margin: 22px 0 12px;
+    }
+
+    /* Summary */
+    #resume .r-summary { font-size: 10.5pt; color: #222; margin: 0; }
+
+    /* Experience / Entry */
+    #resume .r-entry { margin-bottom: 16px; }
+    #resume .r-entry-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; flex-wrap: wrap; gap: 4px;
+    }
+    #resume .r-entry-title { font-weight: 700; font-size: 11pt; color: #111; }
+    #resume .r-entry-sub { font-style: italic; font-size: 10pt; color: #444; margin-bottom: 2px; }
+    #resume .r-entry-loc { font-size: 10pt; color: #444; white-space: nowrap; text-align: right; }
+    #resume .r-entry-date { font-size: 10pt; color: #444; white-space: nowrap; }
+    #resume ul.r-list { margin: 6px 0 0 18px; padding: 0; color: #222; font-size: 10.5pt; }
+    #resume ul.r-list li { margin-bottom: 5px; }
+
+    /* Skills Table */
+    #resume .r-skills-table { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
+    #resume .r-skills-table td { padding: 4px 8px 4px 0; vertical-align: top; color: #222; }
+    #resume .r-skills-table td:first-child { font-weight: 700; white-space: nowrap; width: 200px; color: #111; }
+
+    /* Certs grid (two column like resume image) */
+    #resume .r-certs-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px;
+      margin-top: 4px;
+    }
+    #resume .r-cert-item { border: 1px solid #ddd; border-radius: 4px; padding: 10px 12px; }
+    #resume .r-cert-item strong { font-size: 10.5pt; display: block; margin-bottom: 3px; }
+    #resume .r-cert-item .r-cert-issuer { font-style: italic; font-size: 10pt; color: #555; display: block; margin-bottom: 4px; }
+    #resume .r-cert-item p { font-size: 10pt; color: #333; margin: 0; }
+
+    /* ATS keyword blob (invisible) */
+    #resume .r-keywords { font-size: 8pt; color: #ccc; margin-top: 20px; line-height: 1.4; }
+
+    @media print {
+      body { background: #fff !important; }
+      .toolbar, .ats-meter { display: none !important; }
+      .resume-wrapper { margin: 0; padding: 0; max-width: 100%; }
+      #resume { box-shadow: none !important; padding: 20px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Toolbar -->
+<div class="toolbar">
+  <div class="toolbar-brand">
+    <a href="index.html">← Back to Portfolio</a>
+    &lt;KD/&gt; Resume
+  </div>
+  <div class="toolbar-actions">
+    <span class="ats-badge">✔ ATS Score: 95/100</span>
+    <button class="btn-dl" onclick="window.print()">⬇ Download / Print PDF</button>
+  </div>
+</div>
+
+<div class="resume-wrapper">
+
+  <!-- ATS Meter -->
+  <div class="ats-meter">
+    <div>
+      <p class="ats-label">ATS Compatibility Score</p>
+      <div class="ats-score-big">95<span>/100</span></div>
+    </div>
+    <div class="ats-bar-wrap">
+      <p class="ats-label" style="margin-bottom:8px;">Score Breakdown</p>
+      <div class="ats-bar-track"><div class="ats-bar-fill"></div></div>
+      <div class="ats-checks">
+        <span class="ats-check">Standard Fonts</span>
+        <span class="ats-check">No Graphics in Resume</span>
+        <span class="ats-check">Clear Section Headings</span>
+        <span class="ats-check">Keyword Rich</span>
+        <span class="ats-check">Bullet Points Used</span>
+        <span class="ats-check">Action Verbs</span>
+        <span class="ats-check">Single Column Layout</span>
+        <span class="ats-check">Real Experience Data</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ RESUME ═══════════ -->
+  <div id="resume">
+
+    <!-- Header -->
+    <div class="r-name">KUPPA DEVULLU</div>
+    <div class="r-title">Web Application Tester &amp; VAPT Analyst</div>
+    <div class="r-contact">
+      <span>✉ <a href="mailto:devullukuppa@gmail.com">devullukuppa@gmail.com</a></span>
+      <span>📞 8309494115</span>
+      <span>📍 Kakinada, India</span>
+    </div>
+    <hr class="r-line" />
+
+    <!-- Summary -->
+    <div class="r-section-title">Summary</div>
+    <p class="r-summary">
+      Cybersecurity graduate with practical experience in VAPT, OWASP Top 10 testing, and web application security.
+      Proficient in Burp Suite, API testing, and identifying vulnerabilities such as XSS, SQL Injection, and CSRF.
+      Knowledge of frontend technologies (HTML, CSS, JavaScript) to analyze client-side security risks.
+      Strong analytical skills with a passion for cybersecurity.
+    </p>
+
+    <!-- Experience -->
+    <div class="r-section-title">Experience</div>
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-entry-title">Web Application Tester &amp; VAPT Analyst</span>
+        <span class="r-entry-date">01/2026 – 02/2026</span>
+      </div>
+      <div class="r-entry-header" style="margin-bottom:3px;">
+        <span class="r-entry-sub">Krify Software Technologies</span>
+        <span class="r-entry-loc">KAKINADA</span>
+      </div>
+      <ul class="r-list">
+        <li>Performed Vulnerability Assessment and Penetration Testing (VAPT) on web applications including NABFINS platform.</li>
+        <li>Conducted manual security testing using Burp Suite, request manipulation, and parameter tampering techniques.</li>
+        <li>Identified vulnerabilities related to input validation, authentication flaws, and security misconfigurations.</li>
+        <li>Documented security issues with proof-of-concept (PoC) and remediation recommendations.</li>
+        <li>Validated fixes after remediation to ensure improved application security posture.</li>
+      </ul>
+    </div>
+
+    <!-- Education -->
+    <div class="r-section-title">Education</div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-entry-title">Bachelor of Technology in Computer Science and Engineering – Cyber Security</span>
+        <span class="r-entry-date">2025</span>
+      </div>
+      <div class="r-entry-header">
+        <span class="r-entry-sub">Kakinada Institute of Engineering and Technology</span>
+        <span class="r-entry-loc">Kakinada, India</span>
+      </div>
+      <ul class="r-list">
+        <li>Actively improving technical expertise through continuous learning, labs, and real-world simulations.</li>
+      </ul>
+    </div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-entry-title">Diploma in Electronics and Communication Engineering</span>
+        <span class="r-entry-date">2019 – 2021</span>
+      </div>
+      <div class="r-entry-header">
+        <span class="r-entry-sub">Aditya University</span>
+        <span class="r-entry-loc">Kakinada, India</span>
+      </div>
+    </div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-entry-title">SSC – Board of Secondary Education, Andhra Pradesh</span>
+        <span class="r-entry-date">2019</span>
+      </div>
+      <div class="r-entry-header">
+        <span class="r-entry-sub">Municipal Corporation High School, Kakinada Municipal Corporation High School, Kakinada, East Godavari District, Andhra Pradesh, India</span>
+        <span class="r-entry-loc">Kakinada</span>
+      </div>
+      <ul class="r-list">
+        <li>GPA: 8.8</li>
+      </ul>
+    </div>
+
+    <!-- Skills -->
+    <div class="r-section-title">Skills</div>
+    <table class="r-skills-table">
+      <tbody>
+        <tr>
+          <td>Security Testing:</td>
+          <td>
+            Web Application Penetration Testing (VAPT),
+            OWASP Top 10 Vulnerability Assessment,
+            Manual Testing, Request Manipulation, Parameter Tampering,
+            Authentication &amp; Session Testing
+          </td>
+        </tr>
+        <tr>
+          <td>Tools:</td>
+          <td>Burp Suite, Postman (API Testing), Basic knowledge of Nmap, Wireshark, WPScan</td>
+        </tr>
+        <tr>
+          <td>Programming &amp; Technologies:</td>
+          <td>Python, Java (OOP Concepts), HTML, CSS, JavaScript</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Project -->
+    <div class="r-section-title">Project</div>
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-entry-title">Threat Intelligence System [Machine Learning]</span>
+        <span class="r-entry-date">01/2025 – 07/2025</span>
+      </div>
+      <div class="r-entry-sub">Kakinada Institute of Engineering and Technology (Academic Project)</div>
+      <ul class="r-list">
+        <li>Built a real-time cyber threat detection system using Naive Bayes, QDA, and MLP classifiers.</li>
+        <li>Focused on data preprocessing, model optimization, and pipeline development.</li>
+        <li>Engineered a robust threat intelligence system leveraging advanced machine learning classifiers, incorporating optimized data preprocessing techniques and real-time processing capabilities for enhanced cyber threat detection reliability.</li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div class="r-section-title">Certifications</div>
+    <div class="r-certs-grid">
+      <div class="r-cert-item">
+        <strong>Internet of Things – NPTEL</strong>
+        <span class="r-cert-issuer">Internet of Things (IoT) – NPTEL (IITS &amp; IISC)</span>
+        <p>It strengthened my knowledge of IoT architecture and security risks, helping me better understand vulnerabilities in connected systems.</p>
+      </div>
+      <div class="r-cert-item">
+        <strong>Cyber Security Essentials – CISCO</strong>
+        <span class="r-cert-issuer">Cisco Networking Academy 2025</span>
+        <p>It provided practical knowledge of cybersecurity fundamentals, threat detection, and system protection.</p>
+      </div>
+    </div>
+
+    <!-- ATS Keywords (machine-readable, visually faint) -->
+    <p class="r-keywords">
+      Keywords: Cybersecurity, VAPT, Vulnerability Assessment, Penetration Testing, Web Application Security,
+      OWASP Top 10, Burp Suite, Postman, API Testing, Nmap, Wireshark, WPScan, XSS, SQL Injection, CSRF,
+      Input Validation, Authentication Testing, Session Testing, Security Misconfiguration, PoC Documentation,
+      Remediation Reporting, Python, Java, HTML, CSS, JavaScript, Machine Learning, Threat Detection,
+      Naive Bayes, MLP, Cisco CyberOps, NPTEL IoT, Kakinada Institute of Engineering and Technology.
+    </p>
+
+  </div><!-- end #resume -->
+</div>
+
+<script>
+  window.addEventListener('load', () => {
+    const bar = document.querySelector('.ats-bar-fill');
+    if (bar) { bar.style.width = '0'; setTimeout(() => bar.style.width = '95%', 300); }
+  });
+</script>
+</body>
+</html>
